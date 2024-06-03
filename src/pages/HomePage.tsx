@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const HomePage = () => {
   return (
-    <div className="w-screen h-screen p-4 ">
+    <div className="w-screen h-screen p-4 bg-white ">
       <header>
         <h1 className="text-4xl font-bold text-center">Framer Motion</h1>
       </header>
