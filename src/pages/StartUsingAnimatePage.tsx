@@ -1,11 +1,11 @@
 import { motion } from "framer-motion";
 const StartUsingAnimatePage = () => {
   return (
-    <div className="w-screen h-screen p-4 bg-white ">
+    <div className="w-screen h-screen p-4 ">
       <motion.div
         animate={{
-          x: 300,
-          y: 300,
+          x: 30,
+          y: 30,
           fontSize: "40px",
           fontWeight: "bold",
           color: "#e50e0e",
