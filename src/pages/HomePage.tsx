@@ -11,6 +11,9 @@ const HomePage = () => {
           <li>
             <Link to={"/start-using-animate"}>Start Using Animate</Link>
           </li>
+          <li>
+            <Link to={"/start-using-initial"}>Start Using Initial</Link>
+          </li>
         </ul>
       </main>
     </div>
