@@ -14,6 +14,9 @@ const HomePage = () => {
           <li>
             <Link to={"/start-using-initial"}>Start Using Initial</Link>
           </li>
+          <li>
+            <Link to={"/start-using-transition"}>Start Using Transition</Link>
+          </li>
         </ul>
       </main>
     </div>

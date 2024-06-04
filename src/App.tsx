@@ -3,6 +3,7 @@ import {
   HomePage,
   StartUsingAnimatePage,
   StartUsingInitialPage,
+  StartUsingTransition,
 } from "./pages";
 
 export default function App() {
@@ -11,6 +12,10 @@ export default function App() {
       <Route path="/" element={<HomePage />} />
       <Route path="/start-using-animate" element={<StartUsingAnimatePage />} />
       <Route path="/start-using-initial" element={<StartUsingInitialPage />} />
+      <Route
+        path="/start-using-transition"
+        element={<StartUsingTransition />}
+      />
     </Routes>
   );
 }
