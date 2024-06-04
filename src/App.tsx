@@ -10,12 +10,9 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/start-using-animate" element={<StartUsingAnimatePage />} />
-      <Route path="/start-using-initial" element={<StartUsingInitialPage />} />
-      <Route
-        path="/start-using-transition"
-        element={<StartUsingTransition />}
-      />
+      <Route path="/animate" element={<StartUsingAnimatePage />} />
+      <Route path="/initial" element={<StartUsingInitialPage />} />
+      <Route path="/transition" element={<StartUsingTransition />} />
     </Routes>
   );
 }
