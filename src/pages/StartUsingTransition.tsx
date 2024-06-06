@@ -33,7 +33,7 @@ const StartUsingTransition = () => {
           Using Transition Duration
         </motion.div>
       </section>
-      <section id="ease" className="w-screen h-screen p-4 ">
+      <section id="ease" className="w-screen min-h-screen p-4 ">
         <motion.div
           initial={{ opacity: 0, x: -300 }}
           animate={{ opacity: 1, x: 300, borderRadius: "50px" }}
@@ -129,6 +129,65 @@ const StartUsingTransition = () => {
           className="flex items-center justify-center px-8 py-4 mb-4 text-red-800 bg-red-200 w-80 h-80"
         >
           Using Transition Custom cubic-bezier values
+        </motion.div>
+      </section>
+      <section id="times" className="w-screen h-screen p-4 ">
+        <motion.div
+          initial={{ x: -300 }}
+          animate={{ x: [0, 300, 0, 600, 0] }}
+          transition={{
+            duration: 1,
+            times: [0, 0.1, 0.4, 0.8, 1],
+          }}
+          className="flex items-center justify-center px-8 py-4 text-red-800 bg-red-200 rounded-xl w-80 h-80"
+        >
+          Using Transition Time
+        </motion.div>
+      </section>
+      <section id="repeat" className="w-screen h-screen p-4 ">
+        <motion.div
+          initial={{ x: 0 }}
+          animate={{ x: [0, 100, 0] }}
+          transition={{ duration: 2, repeat: 2 }}
+          className="flex items-center justify-center px-8 py-4 text-red-800 bg-red-200 rounded-xl w-80 h-80"
+        >
+          Using Transition Repeat
+        </motion.div>
+      </section>
+      <section id="repeatType" className="w-screen min-h-screen p-4 ">
+        <motion.div
+          initial={{ x: 0 }}
+          animate={{ x: 500 }}
+          transition={{ duration: 2, repeat: 5, repeatType: "loop" }}
+          className="flex items-center justify-center px-8 py-4 mb-4 text-red-800 bg-red-200 rounded-xl w-80 h-80"
+        >
+          Using Transition RepeatType Loop
+        </motion.div>
+        <motion.div
+          initial={{ x: 0 }}
+          animate={{ x: 500 }}
+          transition={{ duration: 2, repeat: 5, repeatType: "reverse" }}
+          className="flex items-center justify-center px-8 py-4 mb-4 text-red-800 bg-red-200 rounded-xl w-80 h-80"
+        >
+          Using Transition RepeatType Reverse
+        </motion.div>
+        <motion.div
+          initial={{ x: 0 }}
+          animate={{ x: 500 }}
+          transition={{ duration: 2, repeat: 5, repeatType: "mirror" }}
+          className="flex items-center justify-center px-8 py-4 text-red-800 bg-red-200 rounded-xl w-80 h-80"
+        >
+          Using Transition RepeatType Mirror
+        </motion.div>
+      </section>
+      <section id="repeatDelay" className="w-screen h-screen p-4 ">
+        <motion.div
+          initial={{ x: 0 }}
+          animate={{ x: [0, 100, 0] }}
+          transition={{ duration: 2, repeat: 2, repeatDelay: 1 }}
+          className="flex items-center justify-center px-8 py-4 text-red-800 bg-red-200 rounded-xl w-80 h-80"
+        >
+          Using Transition RepeatDelay
         </motion.div>
       </section>
     </main>
