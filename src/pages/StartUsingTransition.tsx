@@ -1,6 +1,19 @@
 import { motion } from "framer-motion";
 
 const StartUsingTransition = () => {
+  const list = {
+    hidden: {
+      opacity: 0,
+      transition: { when: "afterChildren", staggerChildren: 1 },
+    },
+  };
+
+  const item = {
+    hidden: {
+      x: 100,
+      transition: { duration: 2 },
+    },
+  };
   return (
     <main>
       <section id="start-using-transition" className="w-screen h-screen p-4 ">
@@ -189,6 +202,12 @@ const StartUsingTransition = () => {
         >
           Using Transition RepeatDelay
         </motion.div>
+      </section>
+      <section id="when" className="w-screen h-screen p-4 ">
+        <motion.ul variants={list} animate={"hidden"}>
+          <motion.li variants={item}>one child</motion.li>
+          <motion.li variants={item}>two child</motion.li>
+        </motion.ul>
       </section>
     </main>
   );
