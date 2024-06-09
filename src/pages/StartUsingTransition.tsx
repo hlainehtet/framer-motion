@@ -14,6 +14,22 @@ const StartUsingTransition = () => {
       transition: { duration: 2 },
     },
   };
+
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.5,
+      },
+    },
+  };
+
+  const child = {
+    hidden: { opacity: 0, x: 0 },
+    show: { opacity: 1, x: 100 },
+  };
+
   return (
     <main>
       <section id="start-using-transition" className="w-screen h-screen p-4 ">
@@ -207,6 +223,28 @@ const StartUsingTransition = () => {
         <motion.ul variants={list} animate={"hidden"}>
           <motion.li variants={item}>one child</motion.li>
           <motion.li variants={item}>two child</motion.li>
+        </motion.ul>
+      </section>
+      <section id="staggerchildren" className="w-screen h-screen p-4">
+        <motion.ul variants={container} initial="hidden" animate={"show"}>
+          <motion.li
+            variants={child}
+            className="flex items-center justify-center px-8 py-4 mb-4 text-red-800 bg-red-200 w-60 h-60 rounded-xl"
+          >
+            first child
+          </motion.li>
+          <motion.li
+            className="flex items-center justify-center px-8 py-4 mb-4 text-red-800 bg-red-200 w-60 h-60 rounded-xl"
+            variants={child}
+          >
+            second child
+          </motion.li>
+          <motion.li
+            className="flex items-center justify-center px-8 py-4 mb-4 text-red-800 bg-red-200 w-60 h-60 rounded-xl"
+            variants={child}
+          >
+            third child
+          </motion.li>
         </motion.ul>
       </section>
     </main>
